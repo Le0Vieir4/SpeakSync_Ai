@@ -1,29 +1,35 @@
-import { motion } from 'motion/react'
-import React from 'react'
+import { motion } from "motion/react";
 
-export const WavingText = ({text = "", delay = 0.1, className = ""}) => {
-  const letters = text.split("")
-  
+export default function WavingText({
+  text,
+  delay,
+  duration,
+  className,
+  shouldAnimate = true,
+}: {
+  text: string;
+  className?: string;
+  delay: number;
+  duration: number
+  shouldAnimate?: boolean;
+}) {
   return (
-    <div className={`inline-block overflow-hidden ${className}`}>
-      {letters.map((letter, index) => (
-        <motion.span 
+    <span className={className}>
+      {text.split("").map((char, index) => (
+        <motion.span
           key={index}
-          initial={{y: "-100%", opacity: 0}}
-          animate={{y: 0, opacity: 1}}
+          initial={{opacity: 0, y: "-100%" }}
+          animate={shouldAnimate ? {opacity: 1 , y: "0%" } : { y: 0 }}
           transition={{
+            duration: duration,
             delay: index * delay,
-            type: "spring",
-            stiffness: 500,
-            damping: 30,
+            ease: "easeInOut",
           }}
-          style={{display: "inline-block"}}
+          className="inline-block"
         >
-          {letter === "" ? "\u00A0" : letter}
+          {char == " " ? "\u00A0" : char}
         </motion.span>
-
       ))}
-
-    </div>
-  )
+    </span>
+  );
 }
