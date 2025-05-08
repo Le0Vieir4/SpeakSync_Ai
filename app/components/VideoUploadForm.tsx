@@ -68,7 +68,7 @@ export const VideoUploadForm = () => {
   };
 
   return (
-    <div className="w-full h-full py-20">
+    <div className="w-full h-full py-20 px-10 md:py-10">
       <form onSubmit={(e) => e.preventDefault()}>
         <motion.div
           animate={{ opacity: [0, 1], y: [-10, 0] }}
@@ -93,7 +93,7 @@ export const VideoUploadForm = () => {
               </label>
               <Input
                 ref={inputRef}
-                className="my-2 w-full "
+                className="my-2 w-full hover:cursor-pointer "
                 id="video"
                 type="file"
                 accept="video/*"
@@ -141,11 +141,11 @@ export const VideoUploadForm = () => {
           <motion.div
             animate={{ opacity: [0, 1] }}
             transition={{ delay: 1 }}
-            className="md:hidden w-full flex flex-row items-center justify-center gap-2"
+            className="sm:px-10 px-7 flex justify-center items-center gap-2"
           >
             {isLoading ? "" : <UploadButton onClick={handleSubmit} />}
 
-            <Transcriptions />
+            <div className="w-full md:hidden "><Transcriptions /></div>
           </motion.div>
         </motion.div>
       </form>

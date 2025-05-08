@@ -13,7 +13,7 @@ export const UploadButton: React.FC<UploadButtonProps> = ({ onClick }) => {
     <motion.div
       animate={{ opacity: [0, 1], scale: [0.8, 1] }}
       transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
-      className="w-full sm:w-[50%]"
+      className="w-full "
     >
       {transcription ? (
         <motion.button
@@ -48,7 +48,7 @@ export const UploadButton: React.FC<UploadButtonProps> = ({ onClick }) => {
           initial="initial"
           whileHover="hover"
           animate="initial"
-          className=" overflow-hidden group relative w-full flex gap-1 justify-center items-center cursor-pointer bg-gradient-to-br from-white to-gray-100 border rounded-md px-8 py-3 shadow-md drop-shadow-xl font-bold transition duration-1000"
+          className=" overflow-hidden group relative left-1/2 -translate-x-1/2 w-[50%] sm:w-[75%] flex gap-1 justify-center items-center cursor-pointer bg-gradient-to-br from-white to-gray-100 border rounded-md px-8 py-3 shadow-md drop-shadow-xl font-bold transition duration-1000"
           onClick={onClick}
         >
           <motion.div

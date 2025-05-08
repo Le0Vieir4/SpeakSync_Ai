@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <TranscriptionProvider>
       {" "}
-      <main className="overflow-y-auto md:overflow-hidden min-w-[365px] w-full h-screen mx-auto bg-[#FFFFFF]">
+      <main className="overflow-y-auto min-w-[365px] w-full h-full mx-auto bg-[#FFFFFF]">
         <Nav />
         {/* <Hero />  */}
-        <Dashboard />
+        {/* {<Dashboard />} */}
       </main>
     </TranscriptionProvider>
   );

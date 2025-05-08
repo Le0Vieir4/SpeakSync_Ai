@@ -18,10 +18,10 @@ export const Transcriptions = () => {
   const { transcription, fileName } = useTranscription();
 
   return (
-    <TranscriptionProvider>
+    <TranscriptionProvider >
       {transcription && (
         <AlertDialog>
-          <AlertDialogTrigger asChild className="relative w-full ">
+          <AlertDialogTrigger asChild className=" relative w-full ">
             <motion.div
               animate={{ opacity: [0, 1], scale: [0.8, 1] }}
               transition={{ delay: 0.8, duration: 0.5, ease: "easeInOut" }}

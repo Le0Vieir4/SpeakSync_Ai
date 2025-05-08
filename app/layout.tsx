@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto_Mono, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Roboto_Mono, Poppins, Noto_Sans } from "next/font/google";
 import "./globals.css";
 
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
+  display: "block",
+  subsets: ["latin"],
+})
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -36,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${poppins.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${poppins.variable} ${notoSans.variable} antialiased`}
       >
         {children}
       </body>
