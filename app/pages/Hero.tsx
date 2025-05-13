@@ -13,8 +13,8 @@ export const Hero = () => {
               <h1 className="font-bold text-4xl lg:max-w-[520px]">
                 <WavingText
                   text={"Transform the Speech in your video into Text."}
-                  delay={0.05}
-                  duration={1.5}
+                  delay={0.1}
+                  duration={0.2}
                   className="pb-1"
                 />
               </h1>

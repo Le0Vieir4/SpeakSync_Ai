@@ -10,8 +10,8 @@ export default function Home() {
       {" "}
       <main className="overflow-y-auto min-w-[365px] w-full h-full mx-auto bg-[#FFFFFF]">
         <Nav />
-        {/* <Hero />  */}
-        {/* {<Dashboard />} */}
+        <Hero /> 
+        {/* <Dashboard /> */}
       </main>
     </TranscriptionProvider>
   );
